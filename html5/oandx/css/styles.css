@@ -8,8 +8,13 @@
     transform: translate(-50%, -50%);
     font-size: 15vw;
 }
-.OorX {
+/*
+    acmc - acm container.
+*/
+.acmc {
     position: relative;
+}
+.OorX {
     width: 30vw;
     height: 30vw;
     color: white;
