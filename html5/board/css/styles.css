@@ -1,6 +1,6 @@
 .board {
-    height: 100vmin;
-    width: 100vmin;
+    height: 50vmin;
+    width: 50vmin;
     background-color: blue;
-    margin: 0;
+    margin: 25vmin;
 }
