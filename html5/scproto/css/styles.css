@@ -1,0 +1,24 @@
+body {
+    width: 100%;
+    background-color: darkslategrey;
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 50px;
+    color: white;
+}
+h1 {
+    text-align: center;
+}
+p {
+
+    padding: 0 10px;
+    text-align: justify;
+}
+header img {
+    width: 100%;
+}
