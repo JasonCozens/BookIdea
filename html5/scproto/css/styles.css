@@ -22,3 +22,8 @@ p {
 header img {
     width: 100%;
 }
+.inline-img {
+    width: 40%;
+    float: right;
+    margin: 0 0 30px 30px;
+}
