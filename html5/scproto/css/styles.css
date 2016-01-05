@@ -21,11 +21,16 @@ h1 {
     white-space: pre;
 }
 p {
+    text-align: justify;
+    padding: 0 5px 0 5px;
 }
-header img {
+header img, footer img {
     width: 100%;
 }
 .inline-img {
+    width: 30%;
+    float: left;
+    margin: 0 8px 5px 0;
 }
 
 @media screen and (min-width: 520px) {
@@ -34,5 +39,9 @@ header img {
     }
     .part1:after {
         content: " - ";
+    }
+    body {
+        max-width: 960px;
+        margin: auto;
     }
 }
