@@ -1,6 +1,10 @@
+body {
+    width: 100vmin;
+    height: 100vmin;
+    padding: 25vmin;
+}
 .board {
-    height: 50vmin;
-    width: 50vmin;
+    height: 100%;
+    width: 100%;
     background-color: blue;
-    margin: 25vmin;
 }
