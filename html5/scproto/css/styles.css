@@ -2,18 +2,16 @@ body {
     width: 100%;
     background-color: darkslategrey;
     color: white;
-/*    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
-    font-size: 40px;
+    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+    letter-spacing: 0;
     font-stretch: normal;
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
-    letter-spacing: 0;
-    line-height: 50px;*/
 }
 h1 {
     text-align: center;
-
+    font-weight: 100;
 }
 .part1 {
     display: inline;
