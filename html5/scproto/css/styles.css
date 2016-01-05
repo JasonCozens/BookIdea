@@ -13,6 +13,14 @@ body {
 }
 h1 {
     text-align: center;
+
+}
+.part1 {
+    display: inline;
+}
+.part1:after {
+    content: "\A";
+    white-space: pre;
 }
 p {
 }
@@ -20,4 +28,13 @@ header img {
     width: 100%;
 }
 .inline-img {
+}
+
+@media screen and (min-width: 520px) {
+    .part1 {
+        display: inline;
+    }
+    .part1:after {
+        content: " - ";
+    }
 }
