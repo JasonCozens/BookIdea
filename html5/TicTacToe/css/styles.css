@@ -1,1 +1,12 @@
+html {
+    background-color: lemonchiffon;
+}
+body {
+    max-width: 600px;
+    margin: auto;
+    background-color: black;
+}
+.square {
 
+    height: 200px;
+}
