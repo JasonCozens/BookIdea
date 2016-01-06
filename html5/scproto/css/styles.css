@@ -8,6 +8,14 @@ body {
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+.smallport {
+    display: block;
+}
+.mediumport {
+    display: none;
 }
 h1 {
     text-align: center;
@@ -25,7 +33,7 @@ p {
     padding: 0 5px 0 5px;
 }
 header img, footer img {
-    width: 100%;
+    max-width: 100%;
 }
 .inline-img {
     width: 30%;
@@ -43,5 +51,27 @@ header img, footer img {
     body {
         max-width: 960px;
         margin: auto;
+    }
+    header {
+        order: -2;
+        flex-wrap: wrap;
+    }
+    footer {
+        order: -1;
+        flex-wrap: wrap;
+    }
+    .smallport {
+        display: none;
+    }
+    .mediumport {
+        display: block;
+    }
+    header img {
+        display: inline-block;
+        width: 61%;
+    }
+    header .mediumport {
+        display: inline-block;
+        width: 38%;
     }
 }
