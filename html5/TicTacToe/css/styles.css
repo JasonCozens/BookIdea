@@ -1,12 +1,29 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 html {
     background-color: lemonchiffon;
 }
 body {
-    max-width: 600px;
+    width: 60vw;
     margin: auto;
     background-color: black;
+    align-content: center;
+    vertical-align: middle;
+}
+.board {
+    width: 60vw;
+    height: 60vw;
+    background-color: white;
 }
 .square {
-
-    height: 200px;
+    width: 20vw;
+    height: 20vw;
+    display: inline-block;
+    background-color: white;
+    margin: 0 0 -4px 0;
+    border: 0.5vw solid black;
+    padding: 0;
 }
