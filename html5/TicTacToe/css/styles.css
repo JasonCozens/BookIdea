@@ -5,18 +5,23 @@
 }
 html {
     background-color: lemonchiffon;
+    /*height: 100%;*/
 }
 body {
     width: 60vw;
+    height: 100vh;
     margin: auto;
     background-color: black;
-    align-content: center;
-    vertical-align: middle;
+    position: relative;
 }
 .board {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     width: 60vw;
     height: 60vw;
     background-color: white;
+
 }
 .square {
     width: 20vw;
