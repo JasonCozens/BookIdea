@@ -24,6 +24,8 @@ class Tracker:
         self._history.append(self._now())
 
     def stop(self):
+        if len(self._history) == 0:
+            return
         self._history.append(self._now())
 
     @staticmethod

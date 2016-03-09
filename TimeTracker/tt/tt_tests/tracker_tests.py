@@ -40,5 +40,5 @@ class TrackerTest(unittest.TestCase):
         tracker = Tracker(NowMock([
             datetime(2016, 3, 9, 14, 38, 47),
         ]).now)
-        tracker.start()
+        tracker.stop()
         self.assertEqual("", tracker.history)
