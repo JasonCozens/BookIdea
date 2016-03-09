@@ -10,8 +10,14 @@ class Tracker:
     @property
     def history(self):
         h = ""
-        for task in self._history:
-            h += "(" + str(task) + "]"
+        t = -1
+        for t in range(len(self._history)):
+            if Tracker.__is_start_time(t):
+                h += "(" + str(self._history[t])
+            else:
+                h += "," + str(self._history[t]) + ")"
+        if Tracker.__is_start_time(t):
+            h += "]"
         return h
 
     def start(self):
@@ -19,3 +25,7 @@ class Tracker:
 
     def stop(self):
         self._history.append(self._now())
+
+    @staticmethod
+    def __is_start_time(t):
+        return t % 2 == 0
