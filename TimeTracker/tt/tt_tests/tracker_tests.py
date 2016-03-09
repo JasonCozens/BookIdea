@@ -42,3 +42,16 @@ class TrackerTest(unittest.TestCase):
         ]).now)
         tracker.stop()
         self.assertEqual("", tracker.history)
+
+    def test_duplicate_stops_are_ignored(self):
+        tracker = Tracker(NowMock([
+            datetime(2016, 3, 9, 14, 38, 47),
+            datetime(2016, 3, 9, 15, 50, 12),
+            datetime(2016, 3, 9, 16, 50, 10),
+        ]).now)
+        tracker.start()
+        tracker.stop()
+        tracker.stop()
+        self.assertEqual(
+            "(2016-03-09 14:38:47,2016-03-09 15:50:12)",
+            tracker.history)
