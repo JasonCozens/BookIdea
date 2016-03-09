@@ -21,7 +21,10 @@ class Tracker:
         return h
 
     def start(self):
-        self._history.append(self._now())
+        now = self._now()
+        if Tracker.__is_start_time(self._history):
+            self._history.append(now)
+        self._history.append(now)
 
     def stop(self):
         if Tracker.__is_start_time(self._history):
