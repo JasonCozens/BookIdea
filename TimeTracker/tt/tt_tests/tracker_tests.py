@@ -31,6 +31,7 @@ class TrackerTest(unittest.TestCase):
             datetime(2016, 3, 9, 15, 50, 12),
         ]).now)
         tracker.start()
+        tracker.stop()
         self.assertEqual(
             "(2016-03-09 14:38:47,2016-03-09 15:50:12)",
             tracker.history)
