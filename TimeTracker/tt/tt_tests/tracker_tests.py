@@ -35,3 +35,10 @@ class TrackerTest(unittest.TestCase):
         self.assertEqual(
             "(2016-03-09 14:38:47,2016-03-09 15:50:12)",
             tracker.history)
+
+    def test_stop_before_start(self):
+        tracker = Tracker(NowMock([
+            datetime(2016, 3, 9, 14, 38, 47),
+        ]).now)
+        tracker.start()
+        self.assertEqual("", tracker.history)
