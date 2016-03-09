@@ -5,4 +5,4 @@ class Tracker:
 
     @property
     def history(self):
-        return None
+        return ""
