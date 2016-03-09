@@ -11,7 +11,7 @@ class Tracker:
     def history(self):
         h = ""
         for task in self._history:
-            h += "(" + task.strftime("%Y/%m/%d - %H:%M:%S") + "]"
+            h += "(" + str(task) + "]"
         return h
 
     def start(self):
