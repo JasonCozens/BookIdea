@@ -22,4 +22,8 @@ Step 2.
 
     start()
     history -> "(t,)"
+
+Step 3.
+
+    Introduce simple Mock for time.
 """

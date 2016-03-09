@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 class Tracker:
 
     def __init__(self, now=datetime.now):
