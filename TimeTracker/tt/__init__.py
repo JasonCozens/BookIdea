@@ -12,4 +12,14 @@ How should a class be laid out?
     Queries - This tells more about the state.
 
     Commands - These change the state.
+
+Step 2.
+
+    What can be tested?
+
+    start() will have no observable effect, unless we include open tasks in
+    the list.
+
+    start()
+    history -> "(t,)"
 """

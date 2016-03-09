@@ -6,3 +6,8 @@ class Tracker:
     @property
     def history(self):
         return ""
+
+    def start(self):
+        pass
+
+# datetime.datetime.strftime(now(), "%Y/%m/%d - %H:%M:%S")
