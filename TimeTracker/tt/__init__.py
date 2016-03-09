@@ -26,4 +26,14 @@ Step 2.
 Step 3.
 
     Introduce simple Mock for time.
+
+Step 4.
+
+    Need to think about data structure.
+    At the moment the index is being used to determine whether a history
+    is at a start of stop time. It is better to used the length of the
+    history to determine if we are at a start time or a stop time.
+
+    len(H) % 2 == 1 ---> Start
+    len(H) % 2 == 0 ---> Stop
 """

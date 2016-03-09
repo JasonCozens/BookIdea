@@ -10,13 +10,13 @@ class Tracker:
     @property
     def history(self):
         h = ""
-        t = -1
         for t in range(len(self._history)):
-            if Tracker.__is_start_time(t):
-                h += "(" + str(self._history[t])
+            next_time = str(self._history[t])
+            if Tracker.__is_start_time(self._history[0:t + 1]):
+                h += "(" + next_time
             else:
-                h += "," + str(self._history[t]) + ")"
-        if Tracker.__is_start_time(t):
+                h += "," + next_time + ")"
+        if Tracker.__is_start_time(self._history):
             h += "]"
         return h
 
@@ -24,11 +24,9 @@ class Tracker:
         self._history.append(self._now())
 
     def stop(self):
-        if len(self._history) == 0:
-            return
-        if Tracker.__is_start_time(len(self._history) - 1):
+        if Tracker.__is_start_time(self._history):
             self._history.append(self._now())
 
     @staticmethod
-    def __is_start_time(t):
-        return t % 2 == 0
+    def __is_start_time(history):
+        return len(history) % 2 == 1
