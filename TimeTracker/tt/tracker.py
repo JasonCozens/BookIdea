@@ -17,4 +17,3 @@ class Tracker:
     def start(self):
         self._history.append(self._now())
 
-# datetime.datetime.strftime(now(), "%Y/%m/%d - %H:%M:%S")

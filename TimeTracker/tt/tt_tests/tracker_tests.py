@@ -5,8 +5,11 @@ from datetime import datetime
 
 class NowMock:
 
+    def __init__(self, times=[]):
+        self._times = times
+
     def now(self):
-        return datetime(2016, 3, 9, 14, 38, 47)
+        return self._times.pop(0)
 
 
 class TrackerTest(unittest.TestCase):
@@ -16,6 +19,8 @@ class TrackerTest(unittest.TestCase):
         self.assertEqual(tracker.history, "")
 
     def test_start_time_is_now(self):
-        tracker = Tracker(NowMock().now)
+        tracker = Tracker(NowMock([
+            datetime(2016, 3, 9, 14, 38, 47)
+        ]).now)
         tracker.start()
         self.assertEqual("(2016-03-09 14:38:47]", tracker.history)
