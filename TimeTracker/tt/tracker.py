@@ -26,7 +26,8 @@ class Tracker:
     def stop(self):
         if len(self._history) == 0:
             return
-        self._history.append(self._now())
+        if Tracker.__is_start_time(len(self._history) - 1):
+            self._history.append(self._now())
 
     @staticmethod
     def __is_start_time(t):
