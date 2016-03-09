@@ -17,3 +17,5 @@ class Tracker:
     def start(self):
         self._history.append(self._now())
 
+    def stop(self):
+        self._history.append(self._now())
