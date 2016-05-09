@@ -14,6 +14,10 @@ function show_cmd () {
     echo ;
 }
 
+function run_cmd () {
+    eval $1 ;
+}
+
 function show_ex_break () {
     tput setaf ${red}
     printf '%*s\n' $(tput cols) | tr ' ' "-"
@@ -25,21 +29,25 @@ function show_ex_break () {
 cmd=pwd
 echo Where am I? - ${cmd}
 show_cmd ${cmd}
+run_cmd ${cmd}
 show_ex_break
 
 cmd=ls
 echo "What's here? - ${cmd}"
 show_cmd ${cmd}
+run_cmd ${cmd}
 show_ex_break
 
-cmd=cd
+cmd="cd ; pwd"
 echo "Where's home? - ${cmd}"
 show_cmd ${cmd}
+run_cmd ${cmd}
 show_ex_break
 
-cmd="cd -"
+cmd="cd - ; pwd"
 echo "Where did I come from? - ${cmd}"
 show_cmd "${cmd}"
+run_cmd ${cmd}
 show_ex_break
 
 
