@@ -1,2 +1,7 @@
 #!/bin/bash -u
 
+echo Where am I? - pwd
+echo What's here? - ls
+echo Where's home? - cd
+echo Where did I come from? - cd -
+
