@@ -1,5 +1,9 @@
 #!/bin/bash -u
 
+# Define colors.
+red=3
+white=7
+
 function show_cmd () {
     echo -n "$ "
     for (( i = 0; i < ${#1}; i++ )) ;
@@ -11,10 +15,10 @@ function show_cmd () {
 }
 
 function show_ex_break () {
-    tput setaf 3
+    tput setaf ${red}
     printf '%*s\n' $(tput cols) | tr ' ' "-"
     echo
-    tput setaf 7 ;
+    tput setaf ${white} ;
 }
 
 
