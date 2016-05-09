@@ -1,6 +1,6 @@
 #!/bin/bash -u
 
-function display_cmd () {
+function show_cmd () {
     echo -n "$ "
     for (( i = 0; i < ${#1}; i++ )) ;
     do
@@ -10,7 +10,7 @@ function display_cmd () {
     echo ;
 }
 
-function display_ex_break () {
+function show_ex_break () {
     tput setaf 3
     printf '%*s\n' $(tput cols) | tr ' ' "-"
     echo
@@ -20,22 +20,22 @@ function display_ex_break () {
 
 cmd=pwd
 echo Where am I? - ${cmd}
-display_cmd ${cmd}
-display_ex_break
+show_cmd ${cmd}
+show_ex_break
 
 cmd=ls
 echo "What's here? - ${cmd}"
-display_cmd ${cmd}
-display_ex_break
+show_cmd ${cmd}
+show_ex_break
 
 cmd=cd
 echo "Where's home? - ${cmd}"
-display_cmd ${cmd}
-display_ex_break
+show_cmd ${cmd}
+show_ex_break
 
 cmd="cd -"
 echo "Where did I come from? - ${cmd}"
-display_cmd "${cmd}"
-display_ex_break
+show_cmd "${cmd}"
+show_ex_break
 
 
