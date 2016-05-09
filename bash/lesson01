@@ -1,7 +1,30 @@
 #!/bin/bash -u
 
-echo Where am I? - pwd
-echo What's here? - ls
-echo Where's home? - cd
-echo Where did I come from? - cd -
+function display_cmd () {
+    echo -n "$ "
+    for (( i = 0; i < ${#1}; i++ )) ;
+    do
+        echo -n "${1:i:1}"
+        sleep 0.5
+    done
+    echo ;
+}
+
+
+cmd=pwd
+echo Where am I? - ${cmd}
+display_cmd ${cmd}
+
+cmd=ls
+echo "What's here? - ${cmd}"
+display_cmd ${cmd}
+
+cmd=cd
+echo "Where's home? - ${cmd}"
+display_cmd ${cmd}
+
+cmd="cd -"
+echo "Where did I come from? - ${cmd}"
+display_cmd "${cmd}"
+
 
