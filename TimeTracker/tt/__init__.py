@@ -36,4 +36,16 @@ Step 4.
 
     len(H) % 2 == 1 ---> Start
     len(H) % 2 == 0 ---> Stop
+
+Step 5.
+
+    Build a console "view"
+
+    The Tracker class is the controller.
+
+    The list of times is the model.
+
+    We could put the console tracker in the Tracker module but there are
+    likely  to be other views so create a new module console_tracker, use
+    long names at the moment.
 """

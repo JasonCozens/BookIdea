@@ -33,3 +33,7 @@ class Tracker:
     @staticmethod
     def __is_start_time(history):
         return len(history) % 2 == 1
+
+if __name__ == "__main__":
+    print("WELCOME TO TIME TRACKING")
+    input("ARE YOU READY?")
